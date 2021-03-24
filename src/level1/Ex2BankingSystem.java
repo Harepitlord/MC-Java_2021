@@ -1,4 +1,5 @@
 package level1;
+
 import java.util.Scanner;
 
 public class Ex2BankingSystem {
@@ -41,7 +42,7 @@ public class Ex2BankingSystem {
     }
 
     public String toString() {
-        String str = "Account no: "+this.accNo+" \n Name: "+this.name+" \n Balance: "+ this.balance+" \n Branch: "+this.branch;
+        String str = "Account no: " + this.accNo + " \n Name: " + this.name + " \n Balance: " + this.balance + " \n Branch: " + this.branch;
         return str;
     }
 

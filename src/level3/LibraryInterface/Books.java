@@ -7,7 +7,7 @@ public class Books {
     private boolean reserved;
     private String reserveName;
 
-    public Books(String BkName, boolean issued,boolean reserve,String RName) {
+    public Books(String BkName, boolean issued, boolean reserve, String RName) {
         BookName = BkName;
         Issued = issued;
         reserved = reserve;

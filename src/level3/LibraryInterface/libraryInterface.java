@@ -25,12 +25,12 @@ public class libraryInterface implements library {
         if (bookData == null) {
             FileResource fr = new FileResource(f1);
             CSVParser parser = fr.getCSVParser();
-            for (CSVRecord r: parser) {
+            for (CSVRecord r : parser) {
                 String n = r.get("Name");
-                boolean nobi = Integer.parseInt(r.get("Issued"))==1;
-                boolean nobr = Integer.parseInt(r.get("Reserved"))==1;
+                boolean nobi = Integer.parseInt(r.get("Issued")) == 1;
+                boolean nobr = Integer.parseInt(r.get("Reserved")) == 1;
                 String rn = r.get("ReserveName");
-                bookData.put(n,new Books(n,nobi,nobr,rn));
+                bookData.put(n, new Books(n, nobi, nobr, rn));
             }
         }
     }
@@ -64,7 +64,7 @@ public class libraryInterface implements library {
         if (containsBook(n)) {
             if (bookData.get(n).available()) {
                 bookData.get(n).setIssued();
-                System.out.println("The book "+n+" is available and issued");
+                System.out.println("The book " + n + " is available and issued");
             }
         }
     }
@@ -83,7 +83,7 @@ public class libraryInterface implements library {
         System.out.println("Enter the book name: ");
         String n = sc.nextLine();
         if (containsBook(n)) {
-            if(bookData.get(n).available()){
+            if (bookData.get(n).available()) {
                 System.out.println("Enter your name: ");
                 String name = sc.nextLine();
                 bookData.get(n).setReserveName(name);

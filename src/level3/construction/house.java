@@ -1,6 +1,6 @@
 package level3.construction;
 
-public class house extends building{
+public class house extends building {
     private int noBed;
     private int noBaths;
 
@@ -27,6 +27,6 @@ public class house extends building{
 
     @Override
     public String toString() {
-        return "noBed=" + noBed +", noBaths=" + noBaths;
+        return "noBed=" + noBed + ", noBaths=" + noBaths;
     }
 }

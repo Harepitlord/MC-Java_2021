@@ -27,6 +27,6 @@ public class school extends building {
 
     @Override
     public String toString() {
-        return "noClass=" + noClass +", grade='" + grade + "'";
+        return "noClass=" + noClass + ", grade='" + grade + "'";
     }
 }

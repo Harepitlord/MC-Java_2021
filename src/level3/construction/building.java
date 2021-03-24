@@ -42,6 +42,6 @@ public class building {
             apart = "Yes";
         else
             apart = "No";
-        return  "sqFt=" + sqFt +", noFloor=" + noFloor +", apartment=" + apart;
+        return "sqFt=" + sqFt + ", noFloor=" + noFloor + ", apartment=" + apart;
     }
 }

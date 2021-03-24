@@ -1,5 +1,9 @@
+// A basic program that takes student details as input and prints in formatted output
+
+
 package level1;
 // Imports
+
 import java.util.Scanner;
 
 public class Ex1 {
@@ -13,10 +17,10 @@ public class Ex1 {
 
     // Constructors
 
-    public Ex1(String Name, String RegNo,String Dept, Integer YrOfStudy) {
-        this.Name  = Name;
+    public Ex1(String Name, String RegNo, String Dept, Integer YrOfStudy) {
+        this.Name = Name;
         this.RegNo = RegNo;
-        this.Dept  = Dept;
+        this.Dept = Dept;
         this.YrOfStudy = YrOfStudy;
     }
 
@@ -44,10 +48,10 @@ public class Ex1 {
     public void printData() {
 
         // Print data to user
-        System.out.println("Name: "+this.Name);
-        System.out.println("Register No. : "+ this.RegNo);
-        System.out.println("Department: "+this.Dept);
-        System.out.println("Year of Study: "+this.YrOfStudy+" year.");
+        System.out.println("Name: " + this.Name);
+        System.out.println("Register No. : " + this.RegNo);
+        System.out.println("Department: " + this.Dept);
+        System.out.println("Year of Study: " + this.YrOfStudy + " year.");
     }
 
     // Main function

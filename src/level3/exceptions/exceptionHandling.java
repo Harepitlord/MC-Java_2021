@@ -18,8 +18,7 @@ public class exceptionHandling {
         int val = sc.nextInt();
         try {
             num[++pos] = val;
-        }
-        catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("The stack is full");
         }
     }
@@ -30,8 +29,7 @@ public class exceptionHandling {
                 throw new underflow("The stack is empty");
             }
             System.out.println("The top element : " + num[pos--]);
-        }
-        catch (underflow u){
+        } catch (underflow u) {
             System.out.println("The stack is empty");
         }
     }
@@ -39,15 +37,15 @@ public class exceptionHandling {
     private void stackDisplay() {
         System.out.print("The stack values: [");
         for (int i = 0; i < pos; i++) {
-            System.out.print(num[i]+", ");
+            System.out.print(num[i] + ", ");
         }
         System.out.println("]");
     }
 
     public void runner() {
-        while(true) {
+        while (true) {
             System.out.println("Enter your choice: \n1.Push\t2.Pop\t3.Display\t4.Exit");
-            switch(sc.nextInt()) {
+            switch (sc.nextInt()) {
                 case 1 -> stackPush();
                 case 2 -> stackPop();
                 case 3 -> stackDisplay();

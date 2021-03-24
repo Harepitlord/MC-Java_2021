@@ -5,7 +5,7 @@ public class person {
     private int age;
     private int birthYear;
 
-    public person(String n,int a, int year) {
+    public person(String n, int a, int year) {
         name = n;
         age = a;
         birthYear = year;
@@ -37,6 +37,6 @@ public class person {
 
     @Override
     public String toString() {
-        return "name= " + name +", age=" + age +", birthYear=" + birthYear;
+        return "name= " + name + ", age=" + age + ", birthYear=" + birthYear;
     }
 }

@@ -36,7 +36,7 @@ public class constructionClass {
         i = sc.nextInt();
         academy.setNoClass(i);
         System.out.println("Enter the grade : \t 1.Elementary school \t 2.High school");
-        switch (sc.nextInt()){
+        switch (sc.nextInt()) {
             case 1 -> {
                 academy.setGrade("1.Elementary school");
             }
@@ -44,8 +44,8 @@ public class constructionClass {
                 academy.setGrade("High school");
             }
         }
-        System.out.println("Building: "+build.toString());
-        System.out.println("House: "+home.toString());
-        System.out.println("School: "+academy.toString());
+        System.out.println("Building: " + build.toString());
+        System.out.println("House: " + home.toString());
+        System.out.println("School: " + academy.toString());
     }
 }
