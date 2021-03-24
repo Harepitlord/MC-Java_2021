@@ -1,3 +1,5 @@
+// A program which checks whether the given string is in the long string
+
 package level2;
 
 import java.util.Scanner;
@@ -18,10 +20,9 @@ public class findWordString {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string");
         String s = sc.nextLine();
-        if(!str.contains(s)) {
+        if (!str.contains(s)) {
             System.out.println("The string not found");
-        }
-        else {
+        } else {
             System.out.println("The String found");
         }
     }
