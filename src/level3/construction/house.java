@@ -1,3 +1,6 @@
+
+// This class extends the building class and provides the structure to the house class
+
 package level3.construction;
 
 public class house extends building {

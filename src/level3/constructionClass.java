@@ -1,3 +1,6 @@
+
+// This class is the runner class for the construction package
+
 package level3;
 
 import level3.construction.building;
@@ -37,12 +40,9 @@ public class constructionClass {
         academy.setNoClass(i);
         System.out.println("Enter the grade : \t 1.Elementary school \t 2.High school");
         switch (sc.nextInt()) {
-            case 1 -> {
-                academy.setGrade("1.Elementary school");
-            }
-            case 2 -> {
-                academy.setGrade("High school");
-            }
+            case 1 -> academy.setGrade("1.Elementary school");
+            case 2 -> academy.setGrade("High school");
+            default -> System.out.println("Invalid Choice..!! ");
         }
         System.out.println("Building: " + build.toString());
         System.out.println("House: " + home.toString());

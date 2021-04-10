@@ -1,3 +1,6 @@
+
+// This class school extends the building class and creates a structure for the school class
+
 package level3.construction;
 
 public class school extends building {

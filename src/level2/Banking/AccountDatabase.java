@@ -105,16 +105,11 @@ public class AccountDatabase {
 
     // This function is to sort the database according to the account number
     private static HashMap<String, Account> sortByValues(HashMap<String, Account> map) {
-        List list = new LinkedList(map.entrySet());
+        List<Map.Entry<String, Account>> list = new LinkedList<>(map.entrySet());
 
-        Collections.sort(list, new Comparator() {
-            public int compare(Object o1, Object o2) {
-                return ((Comparable) ((Map.Entry) (o1)).getValue()).compareTo(((Map.Entry) (o2)).getValue());
-            }
-        });
-        HashMap sortedHashMap = new LinkedHashMap();
-        for (Iterator it = list.iterator(); it.hasNext(); ) {
-            Map.Entry entry = (Map.Entry) it.next();
+        list.sort((Comparator) (o1, o2) -> ((Comparable) ((Map.Entry) (o1)).getValue()).compareTo(((Map.Entry) (o2)).getValue()));
+        HashMap<String, Account> sortedHashMap = new LinkedHashMap<>();
+        for (Map.Entry<String, Account> entry : list) {
             sortedHashMap.put(entry.getKey(), entry.getValue());
         }
         return sortedHashMap;

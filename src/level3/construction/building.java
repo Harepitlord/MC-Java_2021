@@ -1,3 +1,6 @@
+
+// This class is to create a data structure for the building class
+
 package level3.construction;
 
 public class building {
@@ -5,12 +8,14 @@ public class building {
     private int noFloor;
     private boolean apartment;
 
+    // Constructor
     public building() {
         sqFt = 0.0;
         noFloor = 0;
         apartment = false;
     }
 
+    // Setter functions
     public void setApartment(boolean apartment) {
         this.apartment = apartment;
     }
@@ -23,6 +28,7 @@ public class building {
         this.sqFt = sqFt;
     }
 
+    // Getter functions
     public boolean isApartment() {
         return apartment;
     }
