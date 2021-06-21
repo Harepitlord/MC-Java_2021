@@ -4,6 +4,7 @@ import edu.duke.FileResource;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -30,7 +31,8 @@ public class libraryInterface implements library {
                 boolean nobi = Integer.parseInt(r.get("Issued")) == 1;
                 boolean nobr = Integer.parseInt(r.get("Reserved")) == 1;
                 String rn = r.get("ReserveName");
-                bookData.put(n, new Books(n, nobi, nobr, rn));
+                LocalDate lo = LocalDate.parse(r.get("Date"));
+                bookData.put(n, new Books(n, nobi, nobr, rn,lo));
             }
         }
     }
@@ -58,41 +60,38 @@ public class libraryInterface implements library {
 
 
     @Override
-    public void drawBook() {
-        System.out.println("Enter the book name: ");
-        String n = sc.nextLine();
-        if (containsBook(n)) {
-            if (bookData.get(n).available()) {
-                bookData.get(n).setIssued();
-                System.out.println("The book " + n + " is available and issued");
+    public void drawBook(String bkName) {
+        if (containsBook(bkName)) {
+            if (bookData.get(bkName).available()) {
+                bookData.get(bkName).setIssued();
+                System.out.println("The book " + bkName + " is available and issued");
             }
         }
     }
 
     @Override
-    public void checkStatus() {
-        System.out.println("Enter the book name: ");
-        String n = sc.nextLine();
-        if (containsBook(n)) {
-            bookData.get(n).available();
+    public void checkStatus(String bkName) {
+        if (containsBook(bkName)) {
+            bookData.get(bkName).available();
         }
     }
 
     @Override
-    public void reserveBook() {
-        System.out.println("Enter the book name: ");
-        String n = sc.nextLine();
-        if (containsBook(n)) {
-            if (bookData.get(n).available()) {
+    public void reserveBook(String bkName) {
+        if (containsBook(bkName)) {
+            if (bookData.get(bkName).available()) {
                 System.out.println("Enter your name: ");
                 String name = sc.nextLine();
-                bookData.get(n).setReserveName(name);
+                bookData.get(bkName).setReserveName(name);
             }
         }
     }
 
     @Override
-    public void returnBook() {
+    public void returnBook(String bkName) {
+        if (containsBook(bkName)) {
+            bookData.get(bkName).bookReturn();
+        }
 
     }
 
